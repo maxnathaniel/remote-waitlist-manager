@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "lib": ["es2021"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "types": ["node"]
+  },
+  "include": ["./src/**/*.ts"],
+  "typeRoots": ["./src/types", "node_modules/@types"],
+  "exclude": ["node_modules", "dist", "./tests/**/*.ts", "./__mocks__"]
+}
