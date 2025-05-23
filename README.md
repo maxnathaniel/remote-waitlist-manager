@@ -100,3 +100,12 @@ Your submission will be evaluated based on:
 - On the backend, we have the controller - service - repository pattern. A pretty standard pattern to organize backend codebases. For simplicity, I did not create Domain Objects, DTOs, etc since the surface area of the API is pretty small. If I am building out a big app, I would carefully consider the various Domain objects and how they should be encapsulated.
 - As much as possible, I created small and composable methods or components both in the Frontend and Backend.
 - As for testing, I have added mostly unit test cases with some Integration tests. I had started on a few E2E test cases but found out that it only provided marginal value compared to the overall time spent on fixing flakiness, test execution logic and general E2E issues. Therefore, I decided to focus on other forms of testing.
+
+## Assumptions
+
+- I had taken the liberty to assume that "When a party completes service:" means "a party is seated" and not "a party has finished their meal". Otherwise, it meant that if the restaurant has 10 available seats, only 1 party (even if it's just a party of 1) can occupy the restaurant at any one time.
+- Therefore, once a party is seated, the system will check the next party and enable them to check in if there are sufficient seats for them.
+- I had also added a time out (1 minute hardcoded) so as not to block others in the queue if the party is non responsive
+- A next feature would be to enable a cancel feature that allows parties to drop out from the queue
+
+Thank you for taking the time to review my assigment!
